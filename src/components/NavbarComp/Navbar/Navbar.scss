@@ -1,0 +1,38 @@
+nav {
+  background-color: rgba(33, 39, 49, 1);
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 30px;
+}
+
+.inputBox {
+  padding: 9px;
+  width: 258px;
+  height: 37px;
+  border-radius: 8px;
+  outline: 1px solid rgba(225, 228, 230, 1);
+  display: flex;
+  align-items: center;
+  background-color: white;
+
+  input {
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .nav {
+    gap: 79px;
+  }
+}

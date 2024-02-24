@@ -1,0 +1,41 @@
+@use "./variables" as vars;
+
+@mixin text-css($lineHeight, $fontSize, $fontWeight, $fontColor) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $fontColor;
+  font-family: vars.$inter;
+}
+
+@mixin viewBtn() {
+  //   width: 232px;
+  background-color: rgba(27, 136, 244, 1);
+  height: 44px;
+  @include text-css(24px, 16px, 400, white);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+
+  &:hover {
+    background-color: rgb(3, 103, 203);
+    height: 48px;
+  }
+}
+
+@mixin saleBtn() {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(242, 244, 247, 1);
+  @include text-css(20px, 13px, 400, rgba(7, 71, 134, 1));
+  padding: 2px 3px;
+  height: 26px;
+  border-radius: 4px;
+}

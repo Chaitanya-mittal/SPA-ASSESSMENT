@@ -1,0 +1,67 @@
+@use "../../styles/mixin" as mixins;
+.signInBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 33px 1rem 43px;
+
+  h2 {
+    @include mixins.text-css(44px, 32px, 400, rgba(92, 104, 116, 1));
+    text-align: left;
+    width: 398px;
+  }
+  .EmailBox {
+    display: flex;
+    align-items: center;
+    input {
+      background-color: white;
+      height: 52px;
+      border: none;
+      width: 348px;
+      border-radius: 12px 0 0 12px;
+      padding: 0 10px;
+      @include mixins.text-css(24px, 16px, 400, rgba(92, 104, 116, 1));
+    }
+    .signinbtn {
+      text-decoration: none;
+      background-color: rgba(27, 136, 244, 1);
+      @include mixins.text-css(20px, 14px, 400, white);
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 97px;
+      border-radius: 0 12px 12px 0;
+      letter-spacing: 0.7px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .signInBox {
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    h2 {
+      font-size: 1.5rem;
+      width: auto;
+    }
+    .EmailBox {
+      width: 80%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .signInBox {
+    h2 {
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+}

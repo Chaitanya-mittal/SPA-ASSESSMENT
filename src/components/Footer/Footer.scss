@@ -1,0 +1,56 @@
+@use "../../styles/mixin" as mixins;
+.footer {
+  background-color: rgba(33, 39, 49, 1);
+  height: 452px;
+  padding: 54px 1rem;
+  .mainBox {
+    max-width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    > div {
+      @include mixins.text-css(24px, 16px, 400, white);
+      ul {
+        margin-top: 12px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          @include mixins.text-css(20px, 13px, 400, rgba(182, 189, 196, 1));
+        }
+      }
+    }
+    .country {
+      padding-top: 65px;
+      p {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    padding-left: 3rem;
+    .mainBox {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    overflow-y: auto;
+    padding-left: 1rem;
+    .mainBox {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      .country {
+        padding-top: 0;
+      }
+    }
+  }
+}

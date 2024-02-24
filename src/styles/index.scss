@@ -1,0 +1,19 @@
+@use "./variables" as globalVar;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: globalVar.$base;
+  line-height: 20px;
+}

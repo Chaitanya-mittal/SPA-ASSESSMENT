@@ -1,0 +1,23 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mixins;
+
+.appNavbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  list-style-type: none;
+  margin: 16px 0;
+  gap: 20px;
+  .appNavItem {
+    height: 36px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    padding: 8px 16px;
+    a {
+      @include mixins.text-css(20px, 13px, 400, rgba(75, 86, 101, 1));
+      padding-right: 1rem;
+      text-decoration: none;
+    }
+  }
+}

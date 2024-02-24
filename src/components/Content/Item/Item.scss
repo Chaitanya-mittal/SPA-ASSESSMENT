@@ -1,0 +1,271 @@
+@use "../../../styles/mixin" as mixins;
+@use "../../../styles/variables" as vars;
+.item {
+  display: flex;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  align-items: center;
+  padding-left: 42px;
+  padding-right: 25px;
+  padding-bottom: 4px;
+  //   height: 255px;
+  margin-bottom: 80px;
+  .cardImgBox {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      margin-top: 10px;
+      color: rgba(98, 110, 121, 1);
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+
+  .cardInfoBox {
+    display: flex;
+    .info {
+      flex: 1;
+      margin-left: 58px;
+      margin-right: 25px;
+      padding-top: 21px;
+      padding-bottom: 6px;
+
+      .overview {
+        @include mixins.text-css(24px, 16px, 400, rgba(75, 86, 101, 1));
+        margin-right: 9px;
+        span {
+          font-weight: 700;
+        }
+      }
+
+      .saleBox {
+        display: flex;
+        margin-top: 9px;
+        .saleBtn {
+          @include mixins.saleBtn();
+        }
+      }
+
+      .highlights {
+        .heading {
+          @include mixins.text-css(24px, 16px, 700, rgba(44, 56, 74, 1));
+          margin-top: 4px;
+        }
+        .content {
+          display: block;
+          @include mixins.text-css(24px, 16px, 400, rgba(75, 86, 101, 1));
+          margin: 10px 0 22px 18px;
+        }
+
+        .contentIsObj {
+          background-color: rgba(255, 244, 237, 1);
+          border-radius: 12px;
+          padding: 8px;
+          margin-bottom: 15px;
+        }
+
+        .pointBox {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          @include mixins.text-css(24px, 16px, 400, rgba(27, 136, 244, 1));
+          .point {
+            display: flex;
+            gap: 8px;
+            .pointRating {
+              background-color: rgba(255, 255, 255, 1);
+              border-radius: 4px;
+              width: 40px;
+              height: 28px;
+
+              text-align: center;
+
+              padding: 2px 8px;
+            }
+
+            .pointTitle {
+              color: rgba(75, 86, 101, 1);
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .loveitBox {
+        @include mixins.text-css(24px, 16px, 400, rgba(75, 86, 101, 1));
+
+        margin-bottom: 5px;
+        text-align: left;
+        .heading {
+          margin-bottom: 9px;
+        }
+        .pointBox {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          .point {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @include mixins.text-css(24px, 15px, 400, rgba(75, 86, 101, 1));
+          }
+        }
+      }
+      .showMorebtn {
+        display: flex;
+        font-family: vars.$inter;
+        align-items: center;
+        font-size: 16px;
+        span {
+          color: rgba(27, 136, 244, 1);
+        }
+      }
+    }
+
+    .reviews {
+      padding: 0 0 17px 0;
+      //   height: 255px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .ratingBox {
+        position: relative;
+        height: 118px;
+        width: 135px;
+        background-color: rgba(243, 249, 255, 1);
+        border-radius: 0px 0px 12px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 6px;
+
+        h3 {
+          @include mixins.text-css(48px, 32px, 400, rgba(7, 71, 134, 1));
+        }
+        p {
+          @include mixins.text-css(20px, 14px, 400, rgba(7, 71, 134, 1));
+          margin-bottom: 8px;
+        }
+        .ibtn {
+          height: 10px;
+          width: 10px;
+          position: absolute;
+          top: 3px;
+          right: 42px;
+        }
+      }
+      .viewBtn {
+        width: 232px;
+        background-color: rgba(27, 136, 244, 1);
+        height: 48px;
+        @include mixins.text-css(24px, 16px, 400, white);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: ease;
+
+        &:hover {
+          background-color: rgb(3, 103, 203);
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .indexing {
+    position: absolute;
+    top: 33px;
+    left: -30px;
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(225, 228, 230, 1);
+    @include mixins.text-css(28px, 20px, 400, rgba(98, 110, 121, 1));
+  }
+
+  .special {
+    position: absolute;
+    top: -11px;
+    left: -6px;
+    height: 34px;
+    width: 136px;
+    @include mixins.text-css(24px, 16px, 400, white);
+    background-color: rgba(255, 119, 36, 1);
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 20px;
+      margin-right: 8px;
+      height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .item {
+    flex-direction: column;
+    height: auto;
+    .cardInfoBox {
+      flex-wrap: nowrap;
+      .info {
+        margin-left: 0;
+      }
+      .reviews {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .item {
+    .reviews {
+      height: 255px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .item {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+
+    .cardImgBox {
+      margin-top: 1rem;
+    }
+    .cardInfoBox {
+      flex-direction: column;
+      .info {
+        margin-right: 0;
+      }
+      .reviews {
+        margin: 1rem auto;
+        height: auto;
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item {
+    .indexing {
+      left: -8px;
+    }
+  }
+}

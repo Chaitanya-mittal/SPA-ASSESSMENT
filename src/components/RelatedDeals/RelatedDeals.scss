@@ -1,0 +1,72 @@
+@use "../../styles/mixin" as mixins;
+.relatedDealsBox {
+  margin-bottom: 37px;
+  h1 {
+    @include mixins.text-css(44px, 32px, 400, rgba(44, 56, 74, 1));
+    margin-bottom: 35px;
+  }
+  .cardList {
+    display: flex;
+    gap: 22px;
+  }
+  .card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px;
+    background-color: white;
+    height: 425px;
+    padding: 37px 20px 20px 20px;
+    .btnBox {
+      display: flex;
+      gap: 4px;
+      .saleBtn {
+        @include mixins.saleBtn();
+        margin-right: 4px;
+      }
+    }
+    .cardHead {
+      margin-top: 5px;
+      margin-bottom: 7px;
+      text-align: center;
+      @include mixins.text-css(24px, 16px, 700, rgba(98, 110, 121, 1));
+    }
+    .cardBrief {
+      @include mixins.text-css(24px, 16px, 400, rgba(98, 110, 121, 1));
+      text-align: left;
+    }
+    .priceBox {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      margin-bottom: 12px;
+      .discounted {
+        @include mixins.text-css(28px, 20px, 400, rgba(92, 104, 116, 1));
+      }
+      .old {
+        @include mixins.text-css(20px, 14px, 400, rgba(159, 169, 179, 1));
+      }
+      .sale {
+        @include mixins.text-css(20px, 13px, 400, rgba(239, 76, 93, 1));
+      }
+    }
+    .viewBtn {
+      @include mixins.viewBtn();
+    }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .relatedDealsBox {
+    h1 {
+      text-align: center;
+      font-size: 25px;
+    }
+    .cardList {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

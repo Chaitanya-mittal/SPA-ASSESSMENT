@@ -1,0 +1,60 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as mixins;
+
+.intro {
+  padding-top: 38px;
+
+  h1 {
+    @include mixins.text-css(60px, 3rem, 400, rgba(44, 56, 74, 1));
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 11.67px;
+  }
+
+  .websiteUpdates {
+    border-top: 1px solid rgba(225, 228, 230, 1);
+    border-bottom: 1px solid rgba(225, 228, 230, 1);
+    padding: 16px 5px 9px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .updateField {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      span {
+        @include mixins.text-css(20px, 14px, 400, rgba(75, 86, 101, 1));
+      }
+    }
+    .right {
+      .updateField {
+        display: flex;
+        align-items: center;
+      }
+      span {
+        @include mixins.text-css(20px, 14px, 400, rgba(75, 86, 101, 1));
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 603px) {
+  .intro {
+    h1 {
+      font-size: 2rem;
+    }
+    .websiteUpdates {
+      gap: 1rem;
+      .left {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

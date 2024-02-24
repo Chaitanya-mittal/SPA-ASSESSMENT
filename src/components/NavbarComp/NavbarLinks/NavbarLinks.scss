@@ -1,0 +1,44 @@
+@use "../../../styles/variables" as vars;
+$color1: rgba(209, 214, 218, 1);
+
+.navLinks {
+  //   flex-basis: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  li {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    height: 20px;
+    font-size: 12px;
+    color: $color1;
+    font-family: vars.$inter;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  ul {
+    justify-content: space-around;
+    gap: 30px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  ul {
+    gap: 53px;
+    flex-basis: auto;
+    a {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
