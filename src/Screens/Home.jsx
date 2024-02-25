@@ -4,7 +4,7 @@ import Navbar from "../components/NavbarComp/Navbar/Navbar";
 import "./Home.scss";
 function Home() {
   return (
-    <section>
+    <section className="homeSection">
       <header>
         <Navbar />
       </header>

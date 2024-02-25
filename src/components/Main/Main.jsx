@@ -8,15 +8,13 @@ import SignIn from "../SignIn/SignIn";
 import "./Main.scss";
 function Main() {
   return (
-    <div className="mainContainer">
-      <section className="main">
-        <Intro />
-        <AppNavbar />
-        <Path />
-        <ItemList />
-        <RelatedDeals />
-        <SignIn />
-      </section>
+    <div className="main">
+      <Intro />
+      <AppNavbar />
+      <Path />
+      <ItemList />
+      <RelatedDeals />
+      <SignIn />
     </div>
   );
 }

@@ -12,17 +12,16 @@
   }
 
   .websiteUpdates {
+    display: flex;
     border-top: 1px solid rgba(225, 228, 230, 1);
     border-bottom: 1px solid rgba(225, 228, 230, 1);
-    padding: 16px 5px 9px 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 16px 0 9px 0;
 
     .left {
       display: flex;
       align-items: center;
       gap: 12px;
+      margin-right: auto;
       .updateField {
         display: flex;
         align-items: center;
@@ -45,12 +44,13 @@
   }
 }
 
-@media screen and (max-width: 603px) {
+@media screen and (max-width: 950px) {
   .intro {
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .websiteUpdates {
+      flex-wrap: wrap;
       gap: 1rem;
       .left {
         flex-wrap: wrap;

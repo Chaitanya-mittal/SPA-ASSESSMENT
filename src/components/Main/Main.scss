@@ -1,18 +1,7 @@
-.mainContainer {
+.main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  .main {
-    // max-width: 1024px;
-    margin: auto;
-  }
-}
+  flex-direction: column;
 
-@media screen and (min-width: 1032px) {
-  .mainContainer {
-    .main {
-      max-width: 1024px;
-    }
-  }
+  max-width: 1024px;
+  margin: auto;
 }

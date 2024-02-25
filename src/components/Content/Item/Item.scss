@@ -215,36 +215,12 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .item {
-    flex-direction: column;
-    height: auto;
-    .cardInfoBox {
-      flex-wrap: nowrap;
-      .info {
-        margin-left: 0;
-      }
-      .reviews {
-        margin: 0;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .item {
-    .reviews {
-      height: 255px;
-    }
-  }
-}
-
 @media screen and (max-width: 950px) {
   .item {
     flex-direction: column;
+    margin: auto;
     height: auto;
     padding: 0 1rem;
-
     .cardImgBox {
       margin-top: 1rem;
     }
@@ -252,6 +228,7 @@
       flex-direction: column;
       .info {
         margin-right: 0;
+        margin-left: 0;
       }
       .reviews {
         margin: 1rem auto;
@@ -259,11 +236,22 @@
         gap: 2rem;
       }
     }
+    .indexing {
+      left: -10px;
+    }
   }
 }
 
 @media screen and (max-width: 400px) {
   .item {
+    .cardInfoBox {
+      .info {
+        font-size: 14px;
+      }
+      .viewBtn {
+        width: 100%;
+      }
+    }
     .indexing {
       left: -8px;
     }
